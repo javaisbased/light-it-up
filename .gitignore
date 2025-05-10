@@ -2,3 +2,5 @@
 .godot/
 /android/
 default_bus_layout.tres
+settings.json
+.vscode
