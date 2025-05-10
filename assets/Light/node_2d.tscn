@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ssj5fg170snr"]
+
+[ext_resource type="Texture2D" uid="uid://bl7csfm0083tx" path="res://D23.webp" id="1_bolij"]
+[ext_resource type="Texture2D" uid="uid://sw4gnkeiujni" path="res://assets/light.png" id="2_40euc"]
+
+[node name="Light" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.0267442, 0.0290974)
+texture = ExtResource("1_bolij")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
+position = Vector2(37.3911, 34.3671)
+scale = Vector2(3.03778, 2.92512)
+energy = 3.02
+texture = ExtResource("2_40euc")
