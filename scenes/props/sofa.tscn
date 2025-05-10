@@ -32,10 +32,10 @@ sprite_frames = SubResource("SpriteFrames_l1mjm")
 position = Vector2(-5.5, -7.5)
 shape = SubResource("RectangleShape2D_18uy2")
 
-[node name="Area2D" type="Area2D" parent="RigidBody2D"]
+[node name="InteractionArea" type="Area2D" parent="RigidBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/InteractionArea"]
 position = Vector2(-6.5, -7.5)
 shape = SubResource("RectangleShape2D_jedt6")
 
-[connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RigidBody2D/InteractionArea" to="RigidBody2D" method="_on_area_2d_body_entered"]
