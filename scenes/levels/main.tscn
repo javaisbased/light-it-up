@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c47mby2xcjne2"]
 
-[ext_resource type="PackedScene" uid="uid://5fs8010yenmf" path="res://scenes/levels/world.tscn" id="1_y0acb"]
+[ext_resource type="PackedScene" path="res://scenes/levels/world.tscn" id="1_y0acb"]
 [ext_resource type="AudioStream" uid="uid://50cehmvpmf7f" path="res://assets/music/Hidden Truth.mp3" id="3_j4d2a"]
 [ext_resource type="PackedScene" uid="uid://cw4cmpnyoem4q" path="res://entities/player/lamp_mannen.tscn" id="3_y0acb"]
 

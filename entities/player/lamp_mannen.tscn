@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c5s0emdmq4hd2" path="res://assets/character/character_move3.png" id="7_1onov"]
 [ext_resource type="Texture2D" uid="uid://dbyx6ybag4vet" path="res://assets/character/character_move5.png" id="8_c1eoh"]
 [ext_resource type="Texture2D" uid="uid://prfedcfai31c" path="res://assets/character/character_move2.png" id="9_5w8ux"]
-[ext_resource type="PackedScene" uid="uid://cbpaiwrtlbcuo" path="res://assets/Light/Light.tscn" id="9_my72u"]
+[ext_resource type="PackedScene" uid="uid://ccrwyd15okfet" path="res://assets/Light/Light.tscn" id="9_my72u"]
 [ext_resource type="Texture2D" uid="uid://bd6dujieh753f" path="res://assets/character/character_move6.png" id="10_h8yl2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prieh"]
@@ -310,6 +310,6 @@ rotation = 1.5708
 ignore_rotation = false
 position_smoothing_speed = 8.0
 rotation_smoothing_enabled = true
-rotation_smoothing_speed = 15.0
+rotation_smoothing_speed = 10.0
 
 [node name="Light" parent="CharacterBody2D" instance=ExtResource("9_my72u")]
