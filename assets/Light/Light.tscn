@@ -1,17 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccrwyd15okfet"]
+[gd_scene load_steps=2 format=3 uid="uid://ccrwyd15okfet"]
 
-[ext_resource type="Texture2D" uid="uid://bl7csfm0083tx" path="res://D23.webp" id="1_cjuna"]
 [ext_resource type="Texture2D" uid="uid://sw4gnkeiujni" path="res://assets/light.png" id="2_3dj7t"]
 
 [node name="Light" type="Node2D"]
+light_mask = 512
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
 scale = Vector2(0.0267442, 0.0290974)
-texture = ExtResource("1_cjuna")
 
 [node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
-position = Vector2(37.3911, 34.3671)
-scale = Vector2(3.03778, 2.92512)
-energy = 3.02
+position = Vector2(-37.3916, 68.7351)
+scale = Vector2(7.76293, 6.60727)
+blend_mode = 2
 texture = ExtResource("2_3dj7t")
