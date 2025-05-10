@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dwmbqgxeqwjxa"]
+[gd_scene load_steps=25 format=3 uid="uid://cw4cmpnyoem4q"]
 
 [ext_resource type="Script" uid="uid://vwi80fqbfgw3" path="res://entities/player/NewMovement.gd" id="1_wf2xb"]
 [ext_resource type="Shader" uid="uid://blugt5j7e8tag" path="res://shaders/flash.gdshader" id="3_0jdpy"]
@@ -234,15 +234,15 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("6_nh5sf")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("5_my72u")
 }],
 "loop": true,
 "name": &"walk-down",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -281,7 +281,7 @@ animations = [{
 [node name="Lamp-mannen" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-rotation = -1.44065
+rotation = -1.5708
 script = ExtResource("1_wf2xb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -291,12 +291,15 @@ shape = SubResource("RectangleShape2D_prieh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" groups=["flash"]]
 material = SubResource("ShaderMaterial_k8nyl")
-position = Vector2(0, -16)
-rotation = 1.54873
-scale = Vector2(0.458422, 0.458422)
+position = Vector2(26.75, 0)
+rotation = 1.5708
+scale = Vector2(0.236141, 0.236141)
 sprite_frames = SubResource("SpriteFrames_o7f8s")
 animation = &"walk-down"
 autoplay = "idle-down"
+frame_progress = 0.118438
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+rotation = 1.5708
+ignore_rotation = false
 zoom = Vector2(0.5, 0.5)

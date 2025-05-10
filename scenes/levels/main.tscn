@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c47mby2xcjne2"]
+[gd_scene load_steps=5 format=3 uid="uid://c47mby2xcjne2"]
 
 [ext_resource type="Script" uid="uid://l75nqwukrf52" path="res://world.gd" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://debbxsscqad7p" path="res://scenes/levels/entry.tscn" id="2_y0acb"]
-[ext_resource type="PackedScene" uid="uid://dwmbqgxeqwjxa" path="res://entities/player/lamp_mannen.tscn" id="3_y0acb"]
+[ext_resource type="AudioStream" uid="uid://50cehmvpmf7f" path="res://assets/music/Hidden Truth.mp3" id="3_j4d2a"]
+[ext_resource type="PackedScene" uid="uid://cw4cmpnyoem4q" path="res://entities/player/lamp_mannen.tscn" id="3_y0acb"]
 
 [node name="Main" type="Node2D"]
 
@@ -14,3 +15,9 @@ script = ExtResource("2_1bvp3")
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Lamp-mannen" parent="Entities" instance=ExtResource("3_y0acb")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_j4d2a")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="World" method="_on_audio_stream_player_2d_finished"]
