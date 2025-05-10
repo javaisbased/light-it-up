@@ -1,9 +1,7 @@
 extends CharacterBody2D # Or Sprite2D if no physics needed for player itself
 
 # Signal to notify the world to translate
-signal translate_world(amount) # Amount of translation (positive for forward, negative for backward)
-# Signal to notify the world to rotate
-signal rotate_world(angle_rad)  # Angle in radians to rotate the world
+signal translate_world(direction, amount) # Direction vector and amount of translation
 
 # Player's movement speed - this will effectively be the world's movement speed
 @export var speed = 200.0
@@ -13,6 +11,10 @@ signal rotate_world(angle_rad)  # Angle in radians to rotate the world
 # 0 = Base, 1 = Candle, 2 = Stepladder (future)
 var current_interaction_layer = 0
 var has_candle = false
+
+func _ready():
+	$Camera2D.enabled = true
+	print("[DEBUG] Camera2D enabled:", $Camera2D.is_current()) # Use is_current() to check if it became active
 
 func _physics_process(delta):
 	var forward_input = 0.0
@@ -30,11 +32,14 @@ func _physics_process(delta):
 
 	# Handle translation (forward/backward)
 	if forward_input != 0.0:
-		emit_signal("translate_world", forward_input * speed * delta)
+		var move_direction = -transform.y # Player's local forward vector (upwards)
+		print("[DEBUG] forward_input:", forward_input, " move_direction:", move_direction)
+		emit_signal("translate_world", move_direction, forward_input * speed * delta)
 
 	# Handle rotation (turning left/right)
 	if rotation_input != 0.0:
-		emit_signal("rotate_world", rotation_input * deg_to_rad(turn_speed_deg_sec) * delta)
+		self.rotation += rotation_input * deg_to_rad(turn_speed_deg_sec) * delta
+		print("[DEBUG] rotation_input:", rotation_input, " self.rotation:", self.rotation)
 
 func _input(event):
 	if event.is_action_pressed("interact"):

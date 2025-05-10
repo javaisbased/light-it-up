@@ -19,13 +19,12 @@ texture = ExtResource("2_lquwl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_7mycd")
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
 [node name="World" type="Node2D" parent="."]
 script = ExtResource("2_1bvp3")
 
 [node name="Sprite2D" type="Sprite2D" parent="World"]
 texture = ExtResource("3_lquwl")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[connection signal="rotate_world" from="Player" to="World" method="_on_player_rotate_world"]
 [connection signal="translate_world" from="Player" to="World" method="_on_player_translate_world"]
