@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvi5wabajvvff"]
+
+[ext_resource type="Script" uid="uid://ptd6a0qqurke" path="res://scenes/props/bed_pattern_1a.gd" id="1_abc12"]
+[ext_resource type="Texture2D" uid="uid://s71ynlp1nmtn" path="res://assets/furniture/Bed - Pattern 1.a.png" id="2_def34"]
+
+[sub_resource type="RectangleShape2D" id="SubResource_fgh56"]
+size = Vector2(528, 689)
+
+[sub_resource type="CircleShape2D" id="SubResource_ijk78"]
+radius = 456.375
+
+[sub_resource type="CircleShape2D" id="SubResource_lmn90"]
+radius = 678.0
+
+[sub_resource type="CircleShape2D" id="SubResource_pqr12"]
+radius = 1125.22
+
+[node name="BedPattern1a" type="StaticBody2D"]
+script = ExtResource("1_abc12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_def34")
+
+[node name="CollisionShape2D_Physics" type="CollisionShape2D" parent="."]
+shape = SubResource("SubResource_fgh56")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D_Interaction" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("SubResource_ijk78")
+
+[node name="VisibilityAreaClose" type="Area2D" parent="."]
+
+[node name="CollisionShape2D_VisibilityClose" type="CollisionShape2D" parent="VisibilityAreaClose"]
+shape = SubResource("SubResource_lmn90")
+
+[node name="VisibilityAreaFar" type="Area2D" parent="."]
+
+[node name="CollisionShape2D_VisibilityFar" type="CollisionShape2D" parent="VisibilityAreaFar"]
+shape = SubResource("SubResource_pqr12")

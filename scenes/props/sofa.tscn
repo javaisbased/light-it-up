@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://beg4667hwbjew"]
+[gd_scene load_steps=6 format=3 uid="uid://c2pdcwhahnjmv"]
 
 [ext_resource type="Texture2D" uid="uid://c7kr6x85b8iys" path="res://assets/furniture/Chair - Sofa 1.b.png" id="1_64a6s"]
-[ext_resource type="Script" uid="uid://1lhpk3nehu2x" path="res://scenes/props/object.gd" id="1_jedt6"]
+[ext_resource type="Script" path="res://scenes/props/object.gd" id="1_jedt6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l1mjm"]
 animations = [{

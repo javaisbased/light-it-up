@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scenes/props/static_furniture.gd" id="1_abc12"]
+[ext_resource type="Texture2D" path="res://assets/furniture/Sofa - Pattern 1.a.png" id="2_def34"]
+
+[sub_resource type="RectangleShape2D" id="SubResource_fgh56"]
+size = Vector2(100, 50)
+
+[sub_resource type="CircleShape2D" id="SubResource_ijk78"]
+radius = 60.0
+
+[sub_resource type="CircleShape2D" id="SubResource_lmn90"]
+radius = 150.0
+
+[sub_resource type="CircleShape2D" id="SubResource_pqr12"]
+radius = 300.0
+
+[node name="SofaPattern1a" type="StaticBody2D"]
+script = ExtResource("1_abc12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_def34")
+visible = false
+
+[node name="CollisionShape2D_Physics" type="CollisionShape2D" parent="."]
+shape = SubResource("SubResource_fgh56")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D_Interaction" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("SubResource_ijk78")
+
+[node name="VisibilityAreaClose" type="Area2D" parent="."]
+
+[node name="CollisionShape2D_VisibilityClose" type="CollisionShape2D" parent="VisibilityAreaClose"]
+shape = SubResource("SubResource_lmn90")
+
+[node name="VisibilityAreaFar" type="Area2D" parent="."]
+
+[node name="CollisionShape2D_VisibilityFar" type="CollisionShape2D" parent="VisibilityAreaFar"]
+shape = SubResource("SubResource_pqr12")
