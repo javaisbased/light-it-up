@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c47mby2xcjne2"]
+[gd_scene load_steps=6 format=3 uid="uid://c47mby2xcjne2"]
 
 [ext_resource type="Script" uid="uid://l75nqwukrf52" path="res://world.gd" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://debbxsscqad7p" path="res://scenes/levels/entry.tscn" id="2_y0acb"]
+[ext_resource type="AudioStream" uid="uid://50cehmvpmf7f" path="res://assets/music/Hidden Truth.mp3" id="3_j4d2a"]
 [ext_resource type="PackedScene" uid="uid://dfxvfxqwdnh48" path="res://entities/player/player.tscn" id="3_y0acb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
@@ -13,6 +14,10 @@ script = ExtResource("2_1bvp3")
 
 [node name="Node2D" parent="World" instance=ExtResource("2_y0acb")]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="World"]
+stream = ExtResource("3_j4d2a")
+autoplay = true
+
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("3_y0acb")]
@@ -22,3 +27,5 @@ shape = SubResource("RectangleShape2D_7mycd")
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Player"]
 zoom = Vector2(0.7, 0.7)
+
+[connection signal="finished" from="World/AudioStreamPlayer2D" to="World" method="_on_audio_stream_player_2d_finished"]
