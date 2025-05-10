@@ -281,6 +281,7 @@ animations = [{
 [node name="Lamp-mannen" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+rotation = 1.66938
 script = ExtResource("1_wf2xb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -291,6 +292,7 @@ shape = SubResource("RectangleShape2D_prieh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" groups=["flash"]]
 material = SubResource("ShaderMaterial_k8nyl")
 position = Vector2(0, -16)
+rotation = -1.59576
 scale = Vector2(0.458422, 0.458422)
 sprite_frames = SubResource("SpriteFrames_o7f8s")
 animation = &"walk-down"
