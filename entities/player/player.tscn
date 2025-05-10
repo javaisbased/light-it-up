@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://dfxvfxqwdnh48"]
+[gd_scene load_steps=44 format=3 uid="uid://dfxvfxqwdnh48"]
 
 [ext_resource type="PackedScene" uid="uid://d2nwo602rnihe" path="res://entities/entity.tscn" id="1_fnaeb"]
 [ext_resource type="PackedScene" uid="uid://ry5d5tfsku2i" path="res://scenes/hud/player_hud.tscn" id="2_kl4cw"]
@@ -100,86 +100,6 @@ region = Rect2(480, 100, 40, 50)
 atlas = ExtResource("6_afbqv")
 region = Rect2(560, 150, 40, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uoi2b"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(0, 0, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8e6up"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(40, 0, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xmg2o"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(0, 50, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_64wqr"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(40, 50, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eixhu"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(0, 100, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5uqfi"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(40, 100, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4t8oc"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(0, 150, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h6hm5"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(40, 150, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_310ox"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(240, 0, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_btp4b"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(280, 0, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_og5nk"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(320, 0, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y832p"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(240, 50, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ms5kl"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(280, 50, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1mbv1"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(320, 50, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bgowa"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(320, 100, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k4n24"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(280, 100, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p4mmg"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(240, 100, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_88iry"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(320, 150, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pixvk"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(280, 150, 40, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lt6c7"]
-atlas = ExtResource("6_afbqv")
-region = Rect2(240, 150, 40, 50)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_gx6sm"]
 resource_local_to_scene = true
 animations = [{
@@ -273,10 +193,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uoi2b")
+"texture": ExtResource("11_221hk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8e6up")
+"texture": ExtResource("10_eyb6c")
 }],
 "loop": true,
 "name": &"idle-down",
@@ -284,10 +204,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xmg2o")
+"texture": ExtResource("11_221hk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_64wqr")
+"texture": ExtResource("10_eyb6c")
 }],
 "loop": true,
 "name": &"idle-left",
@@ -295,10 +215,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eixhu")
+"texture": ExtResource("11_221hk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5uqfi")
+"texture": ExtResource("10_eyb6c")
 }],
 "loop": true,
 "name": &"idle-right",
@@ -306,82 +226,64 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4t8oc")
+"texture": ExtResource("11_221hk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h6hm5")
+"texture": ExtResource("10_eyb6c")
 }],
 "loop": true,
 "name": &"idle-up",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_310ox")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_btp4b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_og5nk")
-}],
+"frames": [],
 "loop": true,
 "name": &"run-down",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y832p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ms5kl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1mbv1")
-}],
+"frames": [],
 "loop": true,
 "name": &"run-left",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bgowa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k4n24")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p4mmg")
-}],
+"frames": [],
 "loop": true,
 "name": &"run-right",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_88iry")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pixvk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lt6c7")
-}],
+"frames": [],
 "loop": true,
 "name": &"run-up",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_221hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eyb6c")
+}],
 "loop": true,
 "name": &"walk-down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_221hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eyb6c")
+}],
 "loop": true,
 "name": &"walk-left",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_221hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eyb6c")
+}],
 "loop": true,
 "name": &"walk-right",
 "speed": 5.0
@@ -464,8 +366,6 @@ current_state = NodePath("move")
 [node name="move" type="Node" parent="StateMachine" index="0"]
 script = ExtResource("11_we0b7")
 run_speed_increment = null
-speed = null
-rotation_speed = null
 delay_start = null
 disabled = null
 delay_completion = null

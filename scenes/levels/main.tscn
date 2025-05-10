@@ -21,3 +21,4 @@ script = ExtResource("2_1bvp3")
 shape = SubResource("RectangleShape2D_7mycd")
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Player"]
+zoom = Vector2(0.7, 0.7)
