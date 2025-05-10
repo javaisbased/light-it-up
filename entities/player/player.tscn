@@ -463,6 +463,12 @@ current_state = NodePath("move")
 
 [node name="move" type="Node" parent="StateMachine" index="0"]
 script = ExtResource("11_we0b7")
+run_speed_increment = null
+speed = null
+rotation_speed = null
+delay_start = null
+disabled = null
+delay_completion = null
 
 [node name="input_actions" type="Node" parent="StateMachine/move" index="0" node_paths=PackedStringArray("node_ref")]
 script = ExtResource("4_b1v48")

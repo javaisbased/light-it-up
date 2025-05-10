@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cm3fs5vuwj8we"]
+
+[ext_resource type="Script" uid="uid://l75nqwukrf52" path="res://world.gd" id="1_ht22e"]
+[ext_resource type="Texture2D" uid="uid://cuty8mj0g0ec5" path="res://Floor Plan.png" id="2_5bhfs"]
+[ext_resource type="PackedScene" uid="uid://dfxvfxqwdnh48" path="res://entities/player/player.tscn" id="3_v3xuu"]
+[ext_resource type="PackedScene" uid="uid://ccrwyd15okfet" path="res://assets/Light/Light.tscn" id="4_j8heh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_ht22e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5bhfs")
+
+[node name="Enteties" type="Node2D" parent="."]
+
+[node name="Player" parent="Enteties" instance=ExtResource("3_v3xuu")]
+
+[node name="Camera2D" type="Camera2D" parent="Enteties/Player"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enteties/Player"]
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="Light" parent="Enteties" instance=ExtResource("4_j8heh")]
+position = Vector2(405, 129)
