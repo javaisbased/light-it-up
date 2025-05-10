@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://deh23gnikf4kk"]
+
+[ext_resource type="Texture2D" uid="uid://sw4gnkeiujni" path="res://assets/light.png" id="2_f8cbg"]
+[ext_resource type="Texture2D" uid="uid://cq3ofmwduexki" path="res://assets/furniture/Light - Candle - Large - Lit.png" id="2_l00y3"]
+
+[node name="Standalone-Light" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 11)
+scale = Vector2(0.323171, 0.296428)
+texture = ExtResource("2_l00y3")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+blend_mode = 2
+texture = ExtResource("2_f8cbg")
+texture_scale = 0.4
