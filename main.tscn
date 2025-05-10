@@ -6,6 +6,19 @@
 
 [node name="Main" type="Node2D"]
 
+<<<<<<< Updated upstream
+=======
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_h2yge")
+
+[node name="CharacterSprite" type="AnimatedSprite2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+>>>>>>> Stashed changes
 [node name="World" type="Node2D" parent="."]
 script = ExtResource("2_1bvp3")
 
