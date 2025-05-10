@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://beg4667hwbjew"]
+[gd_scene load_steps=6 format=3 uid="uid://beg4667hwbjew"]
 
 [ext_resource type="Texture2D" uid="uid://c7kr6x85b8iys" path="res://assets/furniture/Chair - Sofa 1.b.png" id="1_64a6s"]
+[ext_resource type="Script" uid="uid://1lhpk3nehu2x" path="res://scenes/props/object.gd" id="1_jedt6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l1mjm"]
 animations = [{
@@ -16,9 +17,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18uy2"]
 size = Vector2(587, 223)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jedt6"]
+size = Vector2(607, 237)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource("1_jedt6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
 sprite_frames = SubResource("SpriteFrames_l1mjm")
@@ -26,3 +31,11 @@ sprite_frames = SubResource("SpriteFrames_l1mjm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(-5.5, -7.5)
 shape = SubResource("RectangleShape2D_18uy2")
+
+[node name="InteractionArea" type="Area2D" parent="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/InteractionArea"]
+position = Vector2(-6.5, -7.5)
+shape = SubResource("RectangleShape2D_jedt6")
+
+[connection signal="body_entered" from="RigidBody2D/InteractionArea" to="RigidBody2D" method="_on_area_2d_body_entered"]
