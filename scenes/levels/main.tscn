@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://c47mby2xcjne2"]
+[gd_scene load_steps=9 format=3 uid="uid://c47mby2xcjne2"]
 
 [ext_resource type="Script" uid="uid://l75nqwukrf52" path="res://world.gd" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://debbxsscqad7p" path="res://scenes/levels/entry.tscn" id="2_y0acb"]
 [ext_resource type="AudioStream" uid="uid://50cehmvpmf7f" path="res://assets/music/Hidden Truth.mp3" id="3_j4d2a"]
 [ext_resource type="PackedScene" uid="uid://cw4cmpnyoem4q" path="res://entities/player/lamp_mannen.tscn" id="3_y0acb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4d2a"]
+size = Vector2(2988, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bv0"]
+size = Vector2(3039, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u81e1"]
+size = Vector2(56, 1801)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubwgw"]
+size = Vector2(80, 1851)
 
 [node name="Main" type="Node2D"]
 
@@ -11,6 +23,30 @@
 script = ExtResource("2_1bvp3")
 
 [node name="Node2D" parent="World" instance=ExtResource("2_y0acb")]
+
+[node name="Bottom Wall" type="StaticBody2D" parent="World"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Bottom Wall"]
+position = Vector2(3, 903)
+shape = SubResource("RectangleShape2D_j4d2a")
+
+[node name="Upper wall" type="StaticBody2D" parent="World"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Upper wall"]
+position = Vector2(-18.5, -931.5)
+shape = SubResource("RectangleShape2D_b6bv0")
+
+[node name="Left wall" type="StaticBody2D" parent="World"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Left wall"]
+position = Vector2(-1519, 6.5)
+shape = SubResource("RectangleShape2D_u81e1")
+
+[node name="Right wall" type="StaticBody2D" parent="World"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Right wall"]
+position = Vector2(1528, -19.5)
+shape = SubResource("RectangleShape2D_ubwgw")
 
 [node name="Entities" type="Node2D" parent="."]
 
