@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bs177bfgd8fo1" path="res://assets/furniture/Feature - Billiards balls 3.png" id="9_avpu8"]
 [ext_resource type="Texture2D" uid="uid://djfki40yxx55l" path="res://assets/furniture/Feature - Billiards ball.png" id="10_4adch"]
 [ext_resource type="Texture2D" uid="uid://2ks4xviot61j" path="res://assets/furniture/Feature - Billiards cue.png" id="11_kf80i"]
-[ext_resource type="PackedScene" uid="uid://deh23gnikf4kk" path="res://assets/Light/standalone_light.tscn" id="12_g72g1"]
+[ext_resource type="PackedScene" path="res://assets/Light/standalone_light.tscn" id="12_g72g1"]
 [ext_resource type="Texture2D" uid="uid://utjajuot2u5d" path="res://assets/furniture/Table - Rectangle 2 - Dark.png" id="13_qs3o8"]
 [ext_resource type="Texture2D" uid="uid://cpp55m18sqbd1" path="res://assets/furniture/Table - Modular - Corner - Dark.png" id="14_7dim4"]
 [ext_resource type="Texture2D" uid="uid://dbse2wsvugonv" path="res://assets/furniture/Table - Modular - Straight - Dark.png" id="15_y616y"]
