@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://brtcgta7xs8q7"]
+[gd_scene load_steps=16 format=3 uid="uid://b0rocce70f1hr"]
 
 [ext_resource type="Texture2D" uid="uid://cw1fvj1vck82j" path="res://assets/rooms/floor_entry.png" id="1_lviqv"]
 [ext_resource type="Texture2D" uid="uid://crh8j4ahl5txh" path="res://assets/rooms/wall_entry.png" id="2_11bol"]
+[ext_resource type="Texture2D" uid="uid://r4x421eib30v" path="res://assets/furniture/Chair - Cushion 1.b.png" id="3_ap0lq"]
+[ext_resource type="Texture2D" uid="uid://b7a2a6pum12yt" path="res://assets/furniture/Chair - Cushion 1.c.png" id="4_5kxot"]
+[ext_resource type="Texture2D" uid="uid://c4jjy08u88o5" path="res://assets/furniture/Chest 1 - Steel.png" id="5_7dim4"]
+[ext_resource type="Texture2D" uid="uid://b6vl3fnxm3bup" path="res://assets/furniture/Clutter - Book pile 2.a.png" id="6_y616y"]
+[ext_resource type="Texture2D" uid="uid://c5mavvbl04vbd" path="res://assets/furniture/Feature - Billiards table.png" id="7_vm5bs"]
+[ext_resource type="Texture2D" uid="uid://rlmjbeqfq2p4" path="res://assets/furniture/Feature - Billiards balls 2.png" id="8_cmbw5"]
+[ext_resource type="Texture2D" uid="uid://bs177bfgd8fo1" path="res://assets/furniture/Feature - Billiards balls 3.png" id="9_avpu8"]
+[ext_resource type="Texture2D" uid="uid://djfki40yxx55l" path="res://assets/furniture/Feature - Billiards ball.png" id="10_4adch"]
+[ext_resource type="Texture2D" uid="uid://2ks4xviot61j" path="res://assets/furniture/Feature - Billiards cue.png" id="11_kf80i"]
+[ext_resource type="PackedScene" uid="uid://deh23gnikf4kk" path="res://assets/Light/standalone_light.tscn" id="12_g72g1"]
+[ext_resource type="Texture2D" uid="uid://utjajuot2u5d" path="res://assets/furniture/Table - Rectangle 2 - Dark.png" id="13_qs3o8"]
+[ext_resource type="Texture2D" uid="uid://cpp55m18sqbd1" path="res://assets/furniture/Table - Modular - Corner - Dark.png" id="14_7dim4"]
+[ext_resource type="Texture2D" uid="uid://dbse2wsvugonv" path="res://assets/furniture/Table - Modular - Straight - Dark.png" id="15_y616y"]
 
 [node name="Waiting Room" type="Node2D"]
 
@@ -19,3 +32,87 @@ position = Vector2(-247.5, 92.9999)
 scale = Vector2(0.842333, 1.142)
 texture = ExtResource("2_11bol")
 metadata/_edit_group_ = true
+
+[node name="Chest1-Steel" type="Sprite2D" parent="."]
+position = Vector2(-1334, 797)
+rotation = -1.58442
+scale = Vector2(1.885, 1.885)
+texture = ExtResource("5_7dim4")
+
+[node name="Clutter-BookPile2_a" type="Sprite2D" parent="."]
+position = Vector2(753, 932)
+scale = Vector2(1.79, 1.79)
+texture = ExtResource("6_y616y")
+
+[node name="Feature-BilliardsTable" type="Sprite2D" parent="."]
+position = Vector2(-342, 272)
+scale = Vector2(1.42, 1.42)
+texture = ExtResource("7_vm5bs")
+
+[node name="Feature-BilliardsBalls2" type="Sprite2D" parent="."]
+position = Vector2(-393, 530)
+texture = ExtResource("8_cmbw5")
+
+[node name="Feature-BilliardsBalls3" type="Sprite2D" parent="."]
+position = Vector2(-323, 207)
+texture = ExtResource("9_avpu8")
+
+[node name="Feature-BilliardsBall" type="Sprite2D" parent="."]
+position = Vector2(-204, 543)
+texture = ExtResource("10_4adch")
+
+[node name="Feature-BilliardsCue" type="Sprite2D" parent="."]
+position = Vector2(-301, 561)
+texture = ExtResource("11_kf80i")
+
+[node name="Table-Rectangle2-Dark" type="Sprite2D" parent="."]
+position = Vector2(-295, 920)
+texture = ExtResource("13_qs3o8")
+
+[node name="Standalone-Light" parent="." instance=ExtResource("12_g72g1")]
+position = Vector2(-314, 878)
+scale = Vector2(1.97, 1.97)
+
+[node name="Table-Modular-Corner-Dark" type="Sprite2D" parent="."]
+position = Vector2(-1312, -738)
+rotation = 1.57162
+scale = Vector2(1.68, 1.68)
+texture = ExtResource("14_7dim4")
+
+[node name="Table-Modular-Straight-Dark" type="Sprite2D" parent="."]
+position = Vector2(-876, -813)
+scale = Vector2(1.68, 1.68)
+texture = ExtResource("15_y616y")
+
+[node name="Table-Modular-Straight-Dark2" type="Sprite2D" parent="."]
+position = Vector2(-367, -809)
+scale = Vector2(1.637, 1.637)
+texture = ExtResource("15_y616y")
+
+[node name="Table-Modular-Straight-Dark3" type="Sprite2D" parent="."]
+position = Vector2(137, -805)
+scale = Vector2(1.637, 1.637)
+texture = ExtResource("15_y616y")
+
+[node name="Table-Modular-Straight-Dark4" type="Sprite2D" parent="."]
+position = Vector2(645, -805)
+scale = Vector2(1.637, 1.637)
+texture = ExtResource("15_y616y")
+
+[node name="Table-Modular-Corner-Dark2" type="Sprite2D" parent="."]
+position = Vector2(815, -725)
+rotation = 3.13975
+scale = Vector2(1.68, 1.68)
+texture = ExtResource("14_7dim4")
+
+[node name="Standalone-Light2" parent="." instance=ExtResource("12_g72g1")]
+position = Vector2(-1427, -732)
+scale = Vector2(1.97, 1.97)
+
+[node name="Chair-Cushion1_c" type="Sprite2D" parent="."]
+position = Vector2(255, -812)
+texture = ExtResource("4_5kxot")
+
+[node name="Chair-Cushion1_b" type="Sprite2D" parent="."]
+position = Vector2(-810, -821)
+texture = ExtResource("3_ap0lq")
