@@ -19,4 +19,4 @@ stream = ExtResource("3_j4d2a")
 autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.156863, 0.180392, 0.196078, 1)
+color = Color(0.175132, 0.200586, 0.217557, 1)

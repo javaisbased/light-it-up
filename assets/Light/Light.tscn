@@ -7,7 +7,7 @@
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-1.52588e-05, 0)
 scale = Vector2(4.01495, 3.69021)
-color = Color(0.270222, 0.270222, 0.270222, 1)
+color = Color(0.336608, 0.336608, 0.336608, 1)
 blend_mode = 2
 shadow_color = Color(0.286684, 0.286684, 0.286684, 0)
 texture = ExtResource("1_iy2g8")
