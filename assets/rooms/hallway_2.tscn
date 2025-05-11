@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://rsorgdnwa44k"]
+
+[ext_resource type="Texture2D" uid="uid://l7ruutuhj0hj" path="res://assets/rooms/Room_hallway3.png" id="1_3vcn6"]
+
+[node name="Hallway2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 4.71239
+texture = ExtResource("1_3vcn6")

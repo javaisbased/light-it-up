@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://oeistwabm3xd"]
+[gd_scene load_steps=24 format=3 uid="uid://oeistwabm3xd"]
 
 [ext_resource type="Script" uid="uid://l75nqwukrf52" path="res://world.gd" id="1_7k8c1"]
 [ext_resource type="PackedScene" uid="uid://debbxsscqad7p" path="res://scenes/levels/entry.tscn" id="2_lfyvx"]
+[ext_resource type="PackedScene" uid="uid://rsorgdnwa44k" path="res://assets/rooms/hallway_2.tscn" id="2_pj0xw"]
 [ext_resource type="PackedScene" uid="uid://nbpm5yi1wxkk" path="res://scenes/levels/cloak_room.tscn" id="3_lfyvx"]
 [ext_resource type="PackedScene" uid="uid://bm773sxk015n1" path="res://scenes/levels/library.tscn" id="4_7xgas"]
 [ext_resource type="PackedScene" uid="uid://cjs1iusabqn1s" path="res://hallway.tscn" id="4_dp8al"]
@@ -11,10 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://bs46y23p3upxc" path="res://assets/rooms/kitchen.tscn" id="8_8c33x"]
 [ext_resource type="Texture2D" uid="uid://vwusmk5gwfy3" path="res://assets/rooms/door_entry.png" id="8_f1v6p"]
 [ext_resource type="PackedScene" uid="uid://bv2nsnyuumxfe" path="res://assets/rooms/study.tscn" id="8_y40x4"]
+[ext_resource type="Texture2D" uid="uid://cv4na3fcnkcso" path="res://assets/furniture/Feature - Bath tub - Large - Full - Dark.png" id="9_gs7m4"]
 [ext_resource type="PackedScene" uid="uid://cqqdmc8pdv2b8" path="res://assets/rooms/dining_room.tscn" id="9_y40x4"]
 [ext_resource type="Texture2D" uid="uid://q16h8lwil7v7" path="res://assets/furniture/Cat 10.d.png" id="10_csbb7"]
 [ext_resource type="PackedScene" uid="uid://brtcgta7xs8q7" path="res://assets/rooms/waiting_room.tscn" id="10_q418o"]
 [ext_resource type="Texture2D" uid="uid://dw4yot1xtuo1f" path="res://assets/furniture/Chair - Stool 1 - Dark.png" id="11_mmplq"]
+[ext_resource type="Texture2D" uid="uid://i32be8jbr0gw" path="res://assets/furniture/Feature - Globe.png" id="14_btahq"]
 [ext_resource type="Texture2D" uid="uid://cej6xaqd7fcx7" path="res://assets/rooms/Black.png" id="16_q418o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4d2a"]
@@ -32,6 +35,13 @@ size = Vector2(80, 1804)
 [node name="The Mansion" type="Node2D"]
 position = Vector2(-66, 0)
 script = ExtResource("1_7k8c1")
+
+[node name="Hallway2" parent="." instance=ExtResource("2_pj0xw")]
+position = Vector2(-2968, -3333)
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="Node2D3" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
@@ -56,6 +66,19 @@ position = Vector2(66, -3941)
 position = Vector2(1795, -9)
 texture = ExtResource("5_gy5pc")
 
+[node name="Entry Restroom2" type="Node2D" parent="."]
+position = Vector2(-3061, -4372)
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="Entry Restroom2"]
+position = Vector2(1810.54, -38.3442)
+scale = Vector2(1.05178, 1.0326)
+texture = ExtResource("5_gy5pc")
+
+[node name="Feature-BathTub-Large-Full-Dark" type="Sprite2D" parent="Entry Restroom2"]
+position = Vector2(1724, 668)
+texture = ExtResource("9_gs7m4")
+
 [node name="Study" parent="." instance=ExtResource("8_y40x4")]
 position = Vector2(-1240, -1909)
 
@@ -72,9 +95,19 @@ scale = Vector2(0.96, 1)
 [node name="Furniture" type="StaticBody2D" parent="Boundaries"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
-position = Vector2(808, 253)
+position = Vector2(808, 242)
 scale = Vector2(6.8, 3.6)
 polygon = PackedVector2Array(-331.324, -290.556, -333.971, -249.444, -309.853, -204.167, -294.853, -206.111, -272.5, -263.611, -286.177, -305.833, -321.324, -309.167, -332.794, -278.611)
+
+[node name="CollisionPolygon2D39" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
+position = Vector2(741, -1059)
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-330.588, -55.5555, -260.735, -52.5, -262.353, -299.444, -331.029, -303.333)
+
+[node name="CollisionPolygon2D40" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
+position = Vector2(73.9999, -745)
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-330.588, -55.5555, -69.4118, -47.7778, -69.4118, -287.222, -91.9118, -289.444, -88.6765, -68.6111, -163.088, -66.3889, -174.118, -91.1111, -227.206, -94.7222, -232.206, -64.7222, -274.265, -64.7222, -276.324, -124.167, -301.618, -152.778, -307.353, -358.889, -311.471, -441.667, -279.118, -451.667, -275.882, -529.722, -233.824, -527.222, -230.147, -551.111, -160.588, -541.944, -132.794, -515.556, -92.3529, -456.944, -100.441, -443.056, -98.5294, -404.444, -70.7353, -409.167, -71.9118, -578.889, -163.088, -584.444, -230.588, -587.5, -303.235, -579.722, -313.971, -590.556, -331.029, -303.333)
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
 position = Vector2(90.9999, 203)
@@ -273,6 +306,11 @@ position = Vector2(3464, 354)
 scale = Vector2(6.8, 3.6)
 polygon = PackedVector2Array(-320.294, -293.889, -322.353, -249.722, -325.735, -214.722, -345, -203.056, -331.471, -162.222, -319.559, -158.611, -319.265, -73.0555, -338.235, -92.2222, -346.324, -70.5555, -325.735, -16.1111, -287.5, -51.3889, -273.971, -263.889, -286.177, -305.833, -313.824, -309.722, -323.971, -272.222)
 
+[node name="Feature-Globe" type="Sprite2D" parent="Boundaries/Furniture"]
+position = Vector2(-1828, -2151)
+scale = Vector2(0.537879, 0.537879)
+texture = ExtResource("14_btahq")
+
 [node name="Bottom Wall" type="StaticBody2D" parent="Boundaries"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries/Bottom Wall"]
@@ -286,6 +324,15 @@ shape = SubResource("RectangleShape2D_j4d2a")
 [node name="Upper wall" type="StaticBody2D" parent="Boundaries"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Upper wall"]
+position = Vector2(-3089, -2889)
+shape = SubResource("RectangleShape2D_b6bv0")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Boundaries/Upper wall"]
+position = Vector2(-2100, -1870)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_b6bv0")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Boundaries/Upper wall"]
 position = Vector2(-1192, -898)
 shape = SubResource("RectangleShape2D_b6bv0")
 
@@ -374,11 +421,23 @@ rotation = 1.5708
 position = Vector2(-359, -1952)
 rotation = 1.5708
 
+[node name="Door6" parent="Doors" instance=ExtResource("6_gy5pc")]
+position = Vector2(-1941, -3342)
+rotation = 1.5708
+
+[node name="Door7" parent="Doors" instance=ExtResource("6_gy5pc")]
+position = Vector2(-3967, -3345)
+rotation = 4.71239
+
 [node name="Door3" parent="Doors" instance=ExtResource("6_gy5pc")]
 position = Vector2(1479, 553)
 rotation = 4.71239
 
 [node name="Door4" parent="Doors" instance=ExtResource("6_gy5pc")]
+position = Vector2(-3084, -2875)
+rotation = 3.14159
+
+[node name="Door8" parent="Doors" instance=ExtResource("6_gy5pc")]
 position = Vector2(68, -877)
 rotation = 3.14159
 
@@ -408,6 +467,6 @@ texture = ExtResource("11_mmplq")
 
 [node name="Black" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(878.5, -882.001)
+position = Vector2(944, -977)
 scale = Vector2(44.002, 29.5117)
 texture = ExtResource("16_q418o")
