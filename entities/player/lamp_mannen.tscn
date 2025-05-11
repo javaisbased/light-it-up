@@ -1,22 +1,14 @@
-[gd_scene load_steps=29 format=3 uid="uid://cw4cmpnyoem4q"]
+[gd_scene load_steps=27 format=3 uid="uid://cw4cmpnyoem4q"]
 
 [ext_resource type="Script" uid="uid://vwi80fqbfgw3" path="res://entities/player/NewMovement.gd" id="1_wf2xb"]
-[ext_resource type="Shader" uid="uid://blugt5j7e8tag" path="res://shaders/flash.gdshader" id="3_0jdpy"]
 [ext_resource type="Texture2D" uid="uid://brrvi4j6u7rx0" path="res://entities/player/chara-hero.png" id="4_wcxlq"]
+[ext_resource type="Texture2D" uid="uid://b5gi0trbbaakq" path="res://assets/character/character_move4bis_standing.png" id="5_nh5sf"]
 [ext_resource type="Texture2D" uid="uid://gdaegmtyiioq" path="res://assets/character/character_move4.png" id="6_iolda"]
 [ext_resource type="Texture2D" uid="uid://c5s0emdmq4hd2" path="res://assets/character/character_move3.png" id="7_1onov"]
 [ext_resource type="Texture2D" uid="uid://dbyx6ybag4vet" path="res://assets/character/character_move5.png" id="8_c1eoh"]
 [ext_resource type="Texture2D" uid="uid://prfedcfai31c" path="res://assets/character/character_move2.png" id="9_5w8ux"]
 [ext_resource type="PackedScene" uid="uid://ccrwyd15okfet" path="res://assets/Light/Light.tscn" id="9_my72u"]
 [ext_resource type="Texture2D" uid="uid://bd6dujieh753f" path="res://assets/character/character_move6.png" id="10_h8yl2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_prieh"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k8nyl"]
-resource_local_to_scene = true
-shader = ExtResource("3_0jdpy")
-shader_parameter/flash_color = Color(0.891291, 4.18738e-06, 8.66354e-07, 1)
-shader_parameter/power = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gx6sm"]
 atlas = ExtResource("4_wcxlq")
@@ -174,12 +166,33 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("6_iolda")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_nh5sf")
+}, {
+"duration": 4.0,
+"texture": ExtResource("6_iolda")
+}, {
+"duration": 3.0,
+"texture": ExtResource("5_nh5sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1onov")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_iolda")
+}, {
+"duration": 3.0,
+"texture": ExtResource("5_nh5sf")
+}, {
+"duration": 1.5,
+"texture": ExtResource("7_1onov")
 }],
 "loop": true,
 "name": &"idle-down",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -234,22 +247,22 @@ animations = [{
 "speed": 2.0
 }, {
 "frames": [{
-"duration": 0.8,
+"duration": 1.5,
 "texture": ExtResource("6_iolda")
 }, {
-"duration": 1.0,
-"texture": ExtResource("7_1onov")
+"duration": 0.8,
+"texture": ExtResource("8_c1eoh")
 }],
 "loop": true,
 "name": &"walk-left",
 "speed": 2.0
 }, {
 "frames": [{
-"duration": 0.8,
+"duration": 1.5,
 "texture": ExtResource("6_iolda")
 }, {
-"duration": 1.0,
-"texture": ExtResource("8_c1eoh")
+"duration": 0.8,
+"texture": ExtResource("7_1onov")
 }],
 "loop": true,
 "name": &"walk-right",
@@ -291,25 +304,31 @@ animations = [{
 rotation = -1.5708
 script = ExtResource("1_wf2xb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_prieh")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" groups=["flash"]]
-material = SubResource("ShaderMaterial_k8nyl")
-position = Vector2(57, 2.49155e-06)
+texture_filter = 1
+position = Vector2(107, 0.000387339)
 rotation = 1.5708
+scale = Vector2(1.59312, 1.59312)
 sprite_frames = SubResource("SpriteFrames_o7f8s")
-animation = &"walk-up"
-autoplay = "idle-down"
+animation = &"walk-right"
+autoplay = "walk-left"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(300, 1.31134e-05)
+position = Vector2(275, 0.000995398)
 rotation = 1.5708
 ignore_rotation = false
-position_smoothing_speed = 8.0
+zoom = Vector2(0.85, 0.85)
+position_smoothing_enabled = true
+position_smoothing_speed = 9.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 10.0
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+position = Vector2(97, -10.9996)
+scale = Vector2(1.58691, 1.58691)
+polygon = PackedVector2Array(0, 0, 6.99998, 5.00003, -5.00005, 13, -5.0001, 27, 5.99984, 43, -1.00016, 45, 1.9998, 55, -8.00025, 69, -25.0003, 70.9999, -39.0003, 80.9999, -51.0004, 101, -74.0004, 98.9997, -83.0003, 87.9997, -91.0001, 39.9997, -112, 17.9996, -109, -6.00039, -103, -18.0004, -93.9999, -32.0003, -87.9998, -51.0003, -76.9997, -79.0003, -64.9997, -85.0002, -51.9997, -83.0002, -42.9997, -71.0002, -26.9998, -65.0001, -8.99978, -61, 1.00017, -48, 1.00014, -38, -5.99988, -34, -1.9999, -28, 6.48499e-05, -18)
+
 [node name="Light" parent="CharacterBody2D" instance=ExtResource("9_my72u")]
+position = Vector2(-0.999998, 3.8147e-06)
+rotation = -1.5708
+scale = Vector2(0.480769, 0.480769)

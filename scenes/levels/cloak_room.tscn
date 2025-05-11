@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://nbpm5yi1wxkk"]
+
+[ext_resource type="Texture2D" uid="uid://bib0o20li8ax" path="res://assets/rooms/room_cloak.png" id="1_7l736"]
+
+[node name="Cloak Room" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7l736")

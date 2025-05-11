@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbpaiwrtlbcuo"]
+[gd_scene load_steps=2 format=3 uid="uid://ccrwyd15okfet"]
 
 [ext_resource type="Texture2D" uid="uid://sw4gnkeiujni" path="res://assets/light.png" id="1_iy2g8"]
 
-[node name="Light" type="Node2D"]
+[node name="Light" type="Node2D" groups=["player"]]
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(4.01495, 3.69021)
+color = Color(0.270222, 0.270222, 0.270222, 1)
 blend_mode = 2
+shadow_color = Color(0.286684, 0.286684, 0.286684, 0)
 texture = ExtResource("1_iy2g8")
 texture_scale = 0.4

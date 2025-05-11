@@ -1,14 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://debbxsscqad7p"]
+[gd_scene load_steps=2 format=3 uid="uid://debbxsscqad7p"]
 
-[ext_resource type="Texture2D" uid="uid://clo6rak0jw75m" path="res://assets/rooms/entry.png" id="1_54p8c"]
-[ext_resource type="PackedScene" uid="uid://dvi5wabajvvff" path="res://scenes/props/bed_pattern_1a.tscn" id="2_kjypr"]
+[ext_resource type="Texture2D" uid="uid://8bljxi0h1tyj" path="res://assets/rooms/room_entry.png" id="1_54p8c"]
 
-[node name="Node2D" type="Node2D"]
+[node name="room_entry" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-48, -727)
 texture = ExtResource("1_54p8c")
-
-[node name="BedPattern1a" parent="Sprite2D" instance=ExtResource("2_kjypr")]
-position = Vector2(1160, -492)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
