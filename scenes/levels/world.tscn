@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cv4na3fcnkcso" path="res://assets/furniture/Feature - Bath tub - Large - Full - Dark.png" id="9_gs7m4"]
 [ext_resource type="PackedScene" uid="uid://cqqdmc8pdv2b8" path="res://assets/rooms/dining_room.tscn" id="9_y40x4"]
 [ext_resource type="Texture2D" uid="uid://q16h8lwil7v7" path="res://assets/furniture/Cat 10.d.png" id="10_csbb7"]
-[ext_resource type="PackedScene" uid="uid://brtcgta7xs8q7" path="res://assets/rooms/waiting_room.tscn" id="10_q418o"]
+[ext_resource type="PackedScene" uid="uid://b0rocce70f1hr" path="res://assets/rooms/waiting_room.tscn" id="10_q418o"]
 [ext_resource type="Texture2D" uid="uid://dw4yot1xtuo1f" path="res://assets/furniture/Chair - Stool 1 - Dark.png" id="11_mmplq"]
 [ext_resource type="Texture2D" uid="uid://i32be8jbr0gw" path="res://assets/furniture/Feature - Globe.png" id="14_btahq"]
 [ext_resource type="Texture2D" uid="uid://cej6xaqd7fcx7" path="res://assets/rooms/Black.png" id="16_q418o"]
@@ -86,10 +86,6 @@ position = Vector2(-1240, -1909)
 
 [node name="Dining Room" parent="." instance=ExtResource("9_y40x4")]
 
-[node name="Waiting Room" parent="." instance=ExtResource("10_q418o")]
-position = Vector2(3528, -4026)
-scale = Vector2(0.96, 1)
-
 [node name="Boundaries" type="Node2D" parent="."]
 
 [node name="Furniture" type="StaticBody2D" parent="Boundaries"]
@@ -102,7 +98,22 @@ polygon = PackedVector2Array(-331.324, -290.556, -333.971, -249.444, -309.853, -
 [node name="CollisionPolygon2D39" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
 position = Vector2(741, -1059)
 scale = Vector2(6.8, 3.6)
-polygon = PackedVector2Array(-330.588, -55.5555, -260.735, -52.5, -262.353, -299.444, -331.029, -303.333)
+polygon = PackedVector2Array(-330.588, -55.5555, -260.735, -52.5, -252.941, -135.278, -335.882, -134.444)
+
+[node name="CollisionPolygon2D41" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
+position = Vector2(63.9999, -1802)
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-330.588, -55.5555, -260.735, -52.5, -252.941, -135.278, -335.882, -134.444)
+
+[node name="CollisionPolygon2D44" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
+position = Vector2(63.9999, -1802)
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-330.588, -55.5555, -260.735, -52.5, -252.941, -135.278, -335.882, -134.444)
+
+[node name="CollisionPolygon2D42" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
+position = Vector2(3220, -4080)
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-330.588, -55.5555, -250.147, 17.7777, -200.147, -139.444, -322.941, -165.833)
 
 [node name="CollisionPolygon2D40" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
 position = Vector2(73.9999, -745)
@@ -135,6 +146,12 @@ scale = Vector2(6.8, 3.6)
 polygon = PackedVector2Array(-310.882, -298.889, -310, -158.333, -285.882, -163.056, -285.147, -255, -285.882, -297.222)
 
 [node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
+position = Vector2(2, -776)
+rotation = 1.5708
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-310.882, -298.889, -310, -158.333, -285.882, -163.056, -285.147, -255, -285.882, -297.222)
+
+[node name="CollisionPolygon2D43" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
 position = Vector2(2, -776)
 rotation = 1.5708
 scale = Vector2(6.8, 3.6)
@@ -470,3 +487,11 @@ z_index = -1
 position = Vector2(944, -977)
 scale = Vector2(44.002, 29.5117)
 texture = ExtResource("16_q418o")
+
+[node name="Waiting Room2" parent="." instance=ExtResource("10_q418o")]
+position = Vector2(3606, -4027)
+
+[node name="CollisionPolygon2D45" type="CollisionPolygon2D" parent="."]
+position = Vector2(361, -4441)
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-330.588, -55.5555, -218.235, -77.5, 71.7647, -71.3889, 64.5588, -129.167, -117.5, -127.5, -335.882, -134.444)

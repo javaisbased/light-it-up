@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=4 uid="uid://dayefv6yyr2we"]
+[gd_scene load_steps=20 format=4 uid="uid://dayefv6yyr2we"]
 
 [ext_resource type="Script" uid="uid://cyncm32qdovi5" path="res://scripts/start_screen.gd" id="1_flm04"]
+[ext_resource type="Texture2D" uid="uid://dq54opkuf0qdr" path="res://assets/rooms/SPlash screen.png" id="2_ec65r"]
 [ext_resource type="AudioStream" uid="uid://c2eo64c2wi5vu" path="res://assets/music/Horror Mytery.mp3" id="2_njl8u"]
 
 [sub_resource type="Image" id="Image_76tfe"]
@@ -1141,6 +1142,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_flm04")
 start_level = "uid://c47mby2xcjne2"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(970, 540)
+texture = ExtResource("2_ec65r")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
