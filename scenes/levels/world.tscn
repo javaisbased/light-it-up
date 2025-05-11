@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://oeistwabm3xd"]
+[gd_scene load_steps=21 format=3 uid="uid://oeistwabm3xd"]
 
 [ext_resource type="Script" uid="uid://l75nqwukrf52" path="res://world.gd" id="1_7k8c1"]
 [ext_resource type="PackedScene" uid="uid://debbxsscqad7p" path="res://scenes/levels/entry.tscn" id="2_lfyvx"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://q16h8lwil7v7" path="res://assets/furniture/Cat 10.d.png" id="10_csbb7"]
 [ext_resource type="PackedScene" uid="uid://brtcgta7xs8q7" path="res://assets/rooms/waiting_room.tscn" id="10_q418o"]
 [ext_resource type="Texture2D" uid="uid://dw4yot1xtuo1f" path="res://assets/furniture/Chair - Stool 1 - Dark.png" id="11_mmplq"]
+[ext_resource type="Texture2D" uid="uid://cej6xaqd7fcx7" path="res://assets/rooms/Black.png" id="16_q418o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4d2a"]
 size = Vector2(2463.25, 40)
@@ -31,6 +32,8 @@ size = Vector2(80, 1804)
 [node name="The Mansion" type="Node2D"]
 position = Vector2(-66, 0)
 script = ExtResource("1_7k8c1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Entry Room" parent="." instance=ExtResource("2_lfyvx")]
 position = Vector2(48, 718)
@@ -402,3 +405,9 @@ texture = ExtResource("11_mmplq")
 [node name="Chair-Stool1-Dark2" type="Sprite2D" parent="Extra furniture"]
 position = Vector2(-1663, -566)
 texture = ExtResource("11_mmplq")
+
+[node name="Black" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(878.5, -882.001)
+scale = Vector2(44.002, 29.5117)
+texture = ExtResource("16_q418o")
