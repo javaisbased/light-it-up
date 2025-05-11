@@ -24,14 +24,13 @@ texture = ExtResource("1_8417j")
 flip_v = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-visible = false
 position = Vector2(4.16667, 0)
 scale = Vector2(1.17339, 1)
 occluder = SubResource("OccluderPolygon2D_oajmi")
 
 [node name="InteractionArea" type="Area2D" parent="."]
 z_index = -1
-position = Vector2(14.5834, -1.5625)
+position = Vector2(2.08334, -4.68751)
 collision_layer = 0
 collision_mask = 8
 monitorable = false
@@ -39,7 +38,7 @@ script = ExtResource("2_gog25")
 metadata/_custom_type_script = "uid://bgm8n3pwwbymt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-308.334, 28.125)
+position = Vector2(-304.167, 28.125)
 scale = Vector2(19.3921, 1.70065)
 shape = SubResource("RectangleShape2D_lln28")
 script = ExtResource("3_10p4y")
