@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://brtcgta7xs8q7"]
+
+[ext_resource type="Texture2D" uid="uid://cw1fvj1vck82j" path="res://assets/rooms/floor_entry.png" id="1_lviqv"]
+[ext_resource type="Texture2D" uid="uid://crh8j4ahl5txh" path="res://assets/rooms/wall_entry.png" id="2_11bol"]
+
+[node name="Waiting Room" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-247.5, 93)
+scale = Vector2(1.14, 1.142)
+texture = ExtResource("1_lviqv")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(0, 0, 2214.45, 1800)
+metadata/_edit_group_ = true
+
+[node name="WallEntry" type="Sprite2D" parent="."]
+position = Vector2(-247.5, 92.9999)
+scale = Vector2(0.842333, 1.142)
+texture = ExtResource("2_11bol")
+metadata/_edit_group_ = true

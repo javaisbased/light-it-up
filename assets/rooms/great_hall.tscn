@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvgupbg0oy55l"]
+
+[ext_resource type="Texture2D" uid="uid://cd7ig3k3aknk" path="res://assets/rooms/floor_greathall2.png" id="1_jgrxv"]
+[ext_resource type="Texture2D" uid="uid://b1cbiv1fyjdy6" path="res://assets/rooms/wall_greathall.png" id="2_jgrxv"]
+
+[node name="Great Hall" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jgrxv")
+
+[node name="WallGreathall" type="Sprite2D" parent="."]
+position = Vector2(0, 5.5)
+scale = Vector2(1.015, 1.0265)
+texture = ExtResource("2_jgrxv")

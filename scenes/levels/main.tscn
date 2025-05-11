@@ -12,7 +12,7 @@ position = Vector2(-83, -658)
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Lamp-mannen" parent="Entities" instance=ExtResource("3_y0acb")]
-position = Vector2(-3, 4)
+position = Vector2(-20, 67)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_j4d2a")

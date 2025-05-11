@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv2nsnyuumxfe"]
+
+[ext_resource type="Texture2D" uid="uid://de0byktsoskn3" path="res://assets/rooms/floor_library - Copy.png" id="1_8xcyu"]
+[ext_resource type="Texture2D" uid="uid://cobj1wu4dorw6" path="res://assets/rooms/wall_library.png" id="2_ceos8"]
+
+[node name="Study" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8xcyu")
+region_enabled = true
+region_rect = Rect2(0, 0, 1700, 2000)
+
+[node name="WallLibrary" type="Sprite2D" parent="."]
+position = Vector2(-307, 2)
+texture = ExtResource("2_ceos8")
+region_enabled = true
+region_rect = Rect2(0, 0, 1088.17, 2000)
+
+[node name="WallLibrary2" type="Sprite2D" parent="."]
+position = Vector2(306, 2)
+rotation = 3.14159
+texture = ExtResource("2_ceos8")
+region_enabled = true
+region_rect = Rect2(0, 0, 1088.17, 2000)

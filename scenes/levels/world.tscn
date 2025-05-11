@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://oeistwabm3xd"]
+[gd_scene load_steps=20 format=3 uid="uid://oeistwabm3xd"]
 
 [ext_resource type="Script" uid="uid://l75nqwukrf52" path="res://world.gd" id="1_7k8c1"]
 [ext_resource type="PackedScene" uid="uid://debbxsscqad7p" path="res://scenes/levels/entry.tscn" id="2_lfyvx"]
@@ -6,8 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://bm773sxk015n1" path="res://scenes/levels/library.tscn" id="4_7xgas"]
 [ext_resource type="PackedScene" uid="uid://cjs1iusabqn1s" path="res://hallway.tscn" id="4_dp8al"]
 [ext_resource type="Texture2D" uid="uid://bxl5j3qhm34ii" path="res://assets/rooms/floor_restroom.png" id="5_gy5pc"]
+[ext_resource type="PackedScene" uid="uid://cvgupbg0oy55l" path="res://assets/rooms/great_hall.tscn" id="6_f1v6p"]
 [ext_resource type="PackedScene" uid="uid://bb5oh80n60rew" path="res://scenes/props/door_new.tscn" id="6_gy5pc"]
+[ext_resource type="PackedScene" uid="uid://bs46y23p3upxc" path="res://assets/rooms/kitchen.tscn" id="8_8c33x"]
 [ext_resource type="Texture2D" uid="uid://vwusmk5gwfy3" path="res://assets/rooms/door_entry.png" id="8_f1v6p"]
+[ext_resource type="PackedScene" uid="uid://bv2nsnyuumxfe" path="res://assets/rooms/study.tscn" id="8_y40x4"]
+[ext_resource type="PackedScene" uid="uid://cqqdmc8pdv2b8" path="res://assets/rooms/dining_room.tscn" id="9_y40x4"]
+[ext_resource type="Texture2D" uid="uid://q16h8lwil7v7" path="res://assets/furniture/Cat 10.d.png" id="10_csbb7"]
+[ext_resource type="PackedScene" uid="uid://brtcgta7xs8q7" path="res://assets/rooms/waiting_room.tscn" id="10_q418o"]
+[ext_resource type="Texture2D" uid="uid://dw4yot1xtuo1f" path="res://assets/furniture/Chair - Stool 1 - Dark.png" id="11_mmplq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4d2a"]
 size = Vector2(2463.25, 40)
@@ -22,6 +29,7 @@ size = Vector2(121, 700.5)
 size = Vector2(80, 1804)
 
 [node name="The Mansion" type="Node2D"]
+position = Vector2(-66, 0)
 script = ExtResource("1_7k8c1")
 
 [node name="Entry Room" parent="." instance=ExtResource("2_lfyvx")]
@@ -36,13 +44,25 @@ position = Vector2(59, -1908)
 [node name="Library2" parent="." instance=ExtResource("4_7xgas")]
 position = Vector2(2503, -1908)
 
+[node name="Great Hall" parent="." instance=ExtResource("6_f1v6p")]
+position = Vector2(66, -3941)
+
 [node name="Entry Restroom" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Entry Restroom"]
 position = Vector2(1795, -9)
 texture = ExtResource("5_gy5pc")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Study" parent="." instance=ExtResource("8_y40x4")]
+position = Vector2(-1240, -1909)
+
+[node name="Kitchen" parent="." instance=ExtResource("8_8c33x")]
+
+[node name="Dining Room" parent="." instance=ExtResource("9_y40x4")]
+
+[node name="Waiting Room" parent="." instance=ExtResource("10_q418o")]
+position = Vector2(3528, -4026)
+scale = Vector2(0.96, 1)
 
 [node name="Boundaries" type="Node2D" parent="."]
 
@@ -220,6 +240,16 @@ position = Vector2(1470, 250)
 scale = Vector2(6.8, 3.6)
 polygon = PackedVector2Array(-331.324, -290.556, -333.971, -249.444, -309.853, -204.167, -294.853, -206.111, -272.5, -263.611, -286.177, -305.833, -321.324, -309.167, -332.794, -278.611)
 
+[node name="CollisionPolygon2D37" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
+position = Vector2(344, 318)
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-306.176, -242.222, -292.5, -228.056, -285, -256.944, -299.853, -265)
+
+[node name="CollisionPolygon2D38" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
+position = Vector2(378, 1366)
+scale = Vector2(6.8, 3.6)
+polygon = PackedVector2Array(-306.176, -242.222, -292.5, -228.056, -285, -256.944, -299.853, -265)
+
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Boundaries/Furniture"]
 position = Vector2(1318, 577)
 scale = Vector2(6.8, 3.6)
@@ -350,6 +380,7 @@ position = Vector2(68, -877)
 rotation = 3.14159
 
 [node name="Door5" parent="Doors" instance=ExtResource("6_gy5pc")]
+z_index = 2
 position = Vector2(62, -2884)
 rotation = 3.14159
 
@@ -357,3 +388,17 @@ rotation = 3.14159
 position = Vector2(63, 891)
 rotation = 3.14159
 texture = ExtResource("8_f1v6p")
+
+[node name="Extra furniture" type="Node2D" parent="."]
+
+[node name="Cat10_d" type="Sprite2D" parent="Extra furniture"]
+position = Vector2(629, -1029)
+texture = ExtResource("10_csbb7")
+
+[node name="Chair-Stool1-Dark" type="Sprite2D" parent="Extra furniture"]
+position = Vector2(-1633, 481)
+texture = ExtResource("11_mmplq")
+
+[node name="Chair-Stool1-Dark2" type="Sprite2D" parent="Extra furniture"]
+position = Vector2(-1663, -566)
+texture = ExtResource("11_mmplq")
